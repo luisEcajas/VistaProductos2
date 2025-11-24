@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artesanías Colombianas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <header>
+    <img src="img/logoblanco-removebg-preview.png" alt="Logo" class="logo-header">
+    <button class="cart-btn" onclick="toggleCart()">
+        🛒 Carrito
+        <span class="badge" id="cartCount">0</span>
+    </button>
+</header>
+        <div class="categories">
+            <button class="category-btn active" onclick="showCategory('todas')">Todas</button>
+            <button class="category-btn" onclick="showCategory('textiles')">🧵 Textiles</button>
+            <button class="category-btn" onclick="showCategory('ceramica')">🏺 Cerámica</button>
+            <button class="category-btn" onclick="showCategory('joyeria')">💎 Joyería</button>
+        </div>
+
+        <!-- aqui se muestran todas las secciones -->
+        <section class="section active" id="todas">
+            <h2>Todos los Productos</h2>
+            <div class="grid" id="allProducts"></div>
+        </section>
+
+        <!-- seccion de textiles -->
+        <section class="section" id="textiles">
+        
+            <div class="grid" id="textilesProducts"></div>
+        </section>
+
+        <!-- seccion de ceramica  -->
+        <section class="section" id="ceramica">
+            
+            <div class="grid" id="ceramicaProducts"></div>
+        </section>
+
+        <!-- seccion de joyeria  -->
+        <section class="section" id="joyeria">
+            
+            <div class="grid" id="joyeriaProducts"></div>
+        </section>
+    </div>
+    <script src="productos.js"></script>
+    </body>
+</html>
